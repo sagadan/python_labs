@@ -1,14 +1,15 @@
 <h1>Лабораторная работа номер 1<h1>
 <h2>Задание номер 1<h2>
-<img width="1280" height="818" alt="lab1-1" src="https://github.com/user-attachments/assets/71d2a436-6b4c-4529-8601-ac1d28aba1f2" />
+<img width="757" height="403" alt="lab prog(1)-1" src="https://github.com/user-attachments/assets/ddb76d45-53a7-45d7-86ae-b6fff545fc74" />
 <h2>Задание номер 2<h2>
-<img width="1280" height="841" alt="5372825309738566050" src="https://github.com/user-attachments/assets/48ffafe7-923b-40c0-a8d2-131c4e5d5825" />
+<img width="664" height="396" alt="lab prog(1)-2" src="https://github.com/user-attachments/assets/a4ffa9a7-d028-4938-8493-0b3af8b80e67" />
 <h2>Задание номер 3<h2>
-<img width="1280" height="980" alt="5372825309738566059" src="https://github.com/user-attachments/assets/82abf37b-3e2a-4c3b-911f-a73c26956087" />
+<img width="828" height="624" alt="lab prog(1)-3" src="https://github.com/user-attachments/assets/61c3b2b7-4370-4d51-a197-630a1efea7a5" />
 <h2>Задание номер 4<h2>
-<img width="1280" height="810" alt="5372825309738566060" src="https://github.com/user-attachments/assets/62081c90-b104-4b9e-a895-260d3fbf62c9" />
+<img width="641" height="346" alt="lab prog(1)-4" src="https://github.com/user-attachments/assets/8c44a8ed-bc5d-490c-b2d4-70d35d03db99" />
 <h2>Задание номер 5<h2>
-<img width="750" height="411" alt="lab prog(1)-5" src="https://github.com/user-attachments/assets/dadc188e-7636-4208-919c-ad696fd87fe0" />
+<img width="750" height="411" alt="lab prog(1)-5" src="https://github.com/user-attachments/assets/6d0d7f30-e291-45f7-a9db-f9cd17d2528b" />
+
 
 
 
