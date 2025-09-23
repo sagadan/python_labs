@@ -8,5 +8,7 @@
 <h2>Задание номер 4<h2>
 <img width="1280" height="810" alt="5372825309738566060" src="https://github.com/user-attachments/assets/62081c90-b104-4b9e-a895-260d3fbf62c9" />
 <h2>Задание номер 5<h2>
-<img width="1280" height="749" alt="5372825309738566065" src="https://github.com/user-attachments/assets/2c25b1f8-0d42-4fb2-8ef8-78ba593c277a" />
+<img width="750" height="411" alt="lab prog(1)-5" src="https://github.com/user-attachments/assets/dadc188e-7636-4208-919c-ad696fd87fe0" />
+
+
 
