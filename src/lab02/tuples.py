@@ -10,21 +10,21 @@ def format_name(name: str) -> str:
         first_name = fio[1][0].upper().strip()
         return f"{last_name} {first_name}."
     elif len(fio) == 0:
-        raise ValueError('Пустое ФИО')
+        return ValueError('Пустое ФИО')
 
 
 def format_group(group: str) -> str:
     if len(group) >= 1:
         return f"гр. {group}"
     else:
-        raise ValueError('Пустая группа')
+        return ValueError('Пустая группа')
 
 
 def format_gpa(gpa: float) -> str:
     if isinstance(gpa, float):
         return f"GPA {gpa:.2f}"
     else:
-        raise ValueError('Неверный тип GPA')
+        return ValueError('Неверный тип GPA')
 
 
 def format_record(rec: tuple[str, str, float]) -> str:

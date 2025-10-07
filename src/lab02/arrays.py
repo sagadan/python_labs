@@ -1,6 +1,6 @@
 def min_max(nums: list[float | int]) -> tuple[float | int, float | int]:
     if len(nums) == 0:
-        raise ValueError('список пуст')
+        return ValueError('список пуст')
     else:
         return min(nums), max(nums)
 
@@ -8,13 +8,13 @@ def unique_sorted(nums: list[float | int]) -> list[float | int]:
     return sorted(set(nums))
 
 def flatten(mat: list[list | tuple]) -> list:
-    a = []
+    f = []
     for row in mat:
         if isinstance(row, list) or isinstance(row, tuple):
-            a.extend(row)
+            f.extend(row)
         else:
-            raise TypeError('строка не строка строк матрицы')
-    return a
+            return TypeError('строка не строка строк матрицы')
+    return f
 
 print('min_max')
 print(min_max(nums=[3, -1, 5, 5, 0]))
