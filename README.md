@@ -44,7 +44,7 @@
 <h2>Задание 1<h2>
 <h3>Реализуйте функции<h3>
 <h3>normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str \<h3>
-<img width="1446" height="534" alt="image" src="https://github.com/user-attachments/assets/4bb924f7-e9c9-417f-a581-1a9e4492addc" />
+<img width="473" height="207" alt="normalize" src="https://github.com/user-attachments/assets/68d26000-58d4-4a47-b366-4bbf087661bb" />
 <h3>tokenize(text: str) -> list[str] \<h3>
 <img width="756" height="184" alt="tokenize" src="https://github.com/user-attachments/assets/9c29097f-1e1b-49e2-bfe2-76746ad83669" />
 <h3>count_freq(tokens: list[str]) -> dict[str, int]\<h3>
