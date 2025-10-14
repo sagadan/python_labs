@@ -2,7 +2,7 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
     if casefold:
         text = text.casefold()
     if yo2e:
-        text = text.replace('ё', 'е')
+        text = text.replace('ё', 'е').replace('Ё','Е')
     text = text.strip()
     spec_symb = ['\\t', '\\r', '\\n', '\\w', '\\f', '\\d', '\\v']
     for symb in spec_symb:
