@@ -40,6 +40,38 @@
 <img width="564" height="671" alt="tuples" src="https://github.com/user-attachments/assets/eadb5c6c-1021-49c5-94b3-54b8a1487a33" />
 <h3>Вывод<h3>
 <img width="346" height="182" alt="tuples_вывод" src="https://github.com/user-attachments/assets/b2fab37d-7539-4a63-8665-50b37050d5ae" />
+<h1>Лабораторная работа номер 3<h1>
+<h2>Задание 1<h2>
+<h3>Реализуйте функции<h3>
+<h3>normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str \<h3>
+<img width="473" height="207" alt="normalize" src="https://github.com/user-attachments/assets/68d26000-58d4-4a47-b366-4bbf087661bb" />
+<h3>tokenize(text: str) -> list[str] \<h3>
+<img width="756" height="184" alt="tokenize" src="https://github.com/user-attachments/assets/9c29097f-1e1b-49e2-bfe2-76746ad83669" />
+<h3>count_freq(tokens: list[str]) -> dict[str, int]\<h3>
+<img width="343" height="118" alt="count_freq" src="https://github.com/user-attachments/assets/4dd4514b-2992-4ea7-bd4b-cfb5e5eeda75" />
+<h3>top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]<h3>
+<img width="435" height="68" alt="top_n" src="https://github.com/user-attachments/assets/275a6632-2f23-4060-906b-5c9c92daf2ec" />
+<h3>Вывод<h3>
+<img width="645" height="263" alt="test_cases" src="https://github.com/user-attachments/assets/80d35de3-89ba-4916-ac88-a3b0f1ca3a1c" />
+<h3>Вывод 1<h3>
+<img width="145" height="74" alt="вывод normalize" src="https://github.com/user-attachments/assets/6e37ca39-e905-474f-99d8-1c9af4b86f8e" />
+<h3>Вывод 2<h3>
+<img width="214" height="93" alt="вывод 2" src="https://github.com/user-attachments/assets/288f6b56-848e-423b-a7d7-7cc8107e7d4c" />
+<h3>Вывод 3<h3>
+<img width="253" height="45" alt="вывод 3" src="https://github.com/user-attachments/assets/36bbe5b5-4b98-4a1d-9144-0a6da342932a" />
+<h2>Задание 2<h2>
+<img width="516" height="281" alt="Задание B" src="https://github.com/user-attachments/assets/d9916a8d-e1c5-4996-ad13-d6762572bccc" />
+<h3>Вывод<h3>
+<img width="829" height="111" alt="вывод задания 2" src="https://github.com/user-attachments/assets/7c65f2cd-d20b-4344-b956-bf0036e4d764" />
+
+
+
+
+
+
+
+
+
 
 
 
