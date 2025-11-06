@@ -41,16 +41,16 @@ def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
 
 
 
- test_case_normalize = ['ПрИвЕт\nМИр\t', 'ёжик, Ёлка', 'Hello\r\nWorld', '  двойные   пробелы  ']
+# test_case_normalize = ['ПрИвЕт\nМИр\t', 'ёжик, Ёлка', 'Hello\r\nWorld', '  двойные   пробелы  ']
+#
+# for i in test_case_normalize:
+#      print(normalize(i))
+#
+# test_case_tokenize = ['привет мир', 'hello,world!!!', 'по-настоящему круто', '2025 год', 'emoji 😀 не слово']
+# for n in test_case_tokenize:
+#     print(tokenize(n))
 
- for i in test_case_normalize:
-     print(normalize(i))
 
- test_case_tokenize = ['привет мир', 'hello,world!!!', 'по-настоящему круто', '2025 год', 'emoji 😀 не слово']
- for n in test_case_tokenize
-     print(tokenize(n))
-
-
- test_case_count_freq =[["a","b","a","c","b","a"]]
- for n in test_case_count_freq:
-    print(top_n(n))
+# test_case_count_freq =[["a","b","a","c","b","a"]]
+# for n in test_case_count_freq:
+#     print(top_n(n))
