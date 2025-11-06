@@ -77,6 +77,25 @@
 <h2>Функция отчет по текстовому файлу:<h2>
 <h3>В основном похоже как в 3 лабораторной, только здесь исключяем ошибки и считываем текст, добавляем запись csv с полученной статистикой<h3>
 <img width="664" height="608" alt="Снимок экрана 2025-10-21 в 13 59 35" src="https://github.com/user-attachments/assets/d6e80439-55d7-42bd-81bd-55d13e8bc719" />
+<h1>Лабораторная работа номер 5<h1>
+<h2>JSON_CSV<h2>
+<img width="665" height="598" alt="JSON_CSV" src="https://github.com/user-attachments/assets/bf3ae944-9def-4635-b9d0-ad7e9393adb2" />
+<h3>CSV -> JSON:<h3>
+<img width="168" height="98" alt="CSV-JSON_1" src="https://github.com/user-attachments/assets/5503bb14-bdd2-4d5a-a2be-40e6b2a6c45f" />
+<img width="232" height="209" alt="CSV-JSON_2" src="https://github.com/user-attachments/assets/8b519274-ce2e-40fc-a25b-cbf8551e172f" />
+<h3>JSON -> CSV:<h3>
+<img width="216" height="169" alt="JSON-CSV_1" src="https://github.com/user-attachments/assets/7b37dcd5-29e8-456d-a016-e4f52f68f953" />
+<img width="138" height="91" alt="JSON-CSV_2" src="https://github.com/user-attachments/assets/b1caa030-bf60-4ce3-9368-5be94dc80940" />
+<h2>CSV_XLXS<h2>
+<img width="963" height="512" alt="CSV_XLSX" src="https://github.com/user-attachments/assets/27651d36-6dca-4975-81cf-b7af8f0e4196" />
+<h3>CSV -> XLSX:<h3>
+<img width="277" height="118" alt="CSV-XLSX_1" src="https://github.com/user-attachments/assets/6abfa075-c864-4b65-82cb-3ecb35d6b4fe" />
+<img width="561" height="422" alt="CSV-XLSX_2" src="https://github.com/user-attachments/assets/ab603d02-a68f-418e-b053-9cbbd199c9fb" />
+
+
+
+
+
 
 
 
