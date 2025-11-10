@@ -86,7 +86,7 @@
 <h3>JSON -> CSV:<h3>
 <img width="216" height="169" alt="JSON-CSV_1" src="https://github.com/user-attachments/assets/7b37dcd5-29e8-456d-a016-e4f52f68f953" />
 <img width="138" height="91" alt="JSON-CSV_2" src="https://github.com/user-attachments/assets/b1caa030-bf60-4ce3-9368-5be94dc80940" />
-<h2>CSV_XLXS<h2>
+<h2>CSV_XLSX<h2>
 <img width="963" height="512" alt="CSV_XLSX" src="https://github.com/user-attachments/assets/27651d36-6dca-4975-81cf-b7af8f0e4196" />
 <h3>CSV -> XLSX:<h3>
 <img width="277" height="118" alt="CSV-XLSX_1" src="https://github.com/user-attachments/assets/6abfa075-c864-4b65-82cb-3ecb35d6b4fe" />
