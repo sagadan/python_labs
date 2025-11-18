@@ -108,8 +108,8 @@
 <h3>CLI (Command Line Interface) — интерфейс взаимодействия через консоль.
 CLI‑программы позволяют вызывать функции программы через команды и флаги<h3>
 <h2>CLI_text<h2>
-<img width="496" height="615" alt="cli_text_1" src="https://github.com/user-attachments/assets/4ec87e48-70ab-462d-b9f4-cb2070d6cc40" />
-<img width="417" height="439" alt="cli_text_2" src="https://github.com/user-attachments/assets/5fe55f3d-9bf0-4e42-9a2f-6e706166322c" />
+<img width="787" height="612" alt="cli_text_1" src="https://github.com/user-attachments/assets/6eb8c290-d961-4e7b-a8b5-2cac6f74be8f" />
+<img width="682" height="433" alt="cli_text_2" src="https://github.com/user-attachments/assets/a164405d-f8e2-4d5b-bc9f-c96a2c1c5591" />
 <h3>Вывод строк с номерами:<h3>
 <img width="415" height="77" alt="lab06_cat" src="https://github.com/user-attachments/assets/38137181-26ab-4c71-b9d8-06e09b2b6dec" />
 <h3>Вывод топ слов :<h3>
