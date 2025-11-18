@@ -104,6 +104,28 @@
 <h3>CSV -> XLSX:<h3>
 <img width="277" height="118" alt="CSV-XLSX_1" src="https://github.com/user-attachments/assets/6abfa075-c864-4b65-82cb-3ecb35d6b4fe" />
 <img width="561" height="422" alt="CSV-XLSX_2" src="https://github.com/user-attachments/assets/ab603d02-a68f-418e-b053-9cbbd199c9fb" />
+<h1>Лабораторная работа номер 6<h1>
+<h3>CLI (Command Line Interface) — интерфейс взаимодействия через консоль.
+CLI‑программы позволяют вызывать функции программы через команды и флаги<h3>
+<h2>CLI_text<h2>
+<img width="496" height="615" alt="cli_text_1" src="https://github.com/user-attachments/assets/4ec87e48-70ab-462d-b9f4-cb2070d6cc40" />
+<img width="417" height="439" alt="cli_text_2" src="https://github.com/user-attachments/assets/5fe55f3d-9bf0-4e42-9a2f-6e706166322c" />
+<h3>Вывод строк с номерами:<h3>
+<img width="415" height="77" alt="lab06_cat" src="https://github.com/user-attachments/assets/38137181-26ab-4c71-b9d8-06e09b2b6dec" />
+<h3>Вывод топ слов :<h3>
+<img width="295" height="115" alt="lab06_stats" src="https://github.com/user-attachments/assets/5c5c99b7-77e6-4a0e-9951-48a4d2837b5a" />
+<h2>CLI_convert<h2>
+<img width="558" height="563" alt="cli_convert_1" src="https://github.com/user-attachments/assets/24b31cc7-1168-4b25-a8c9-a0696b03add0" />
+<img width="634" height="372" alt="cli_convert_2" src="https://github.com/user-attachments/assets/f9bd1ba4-4f1c-4432-993f-f26b5893433c" />
+<h2>Help<h2>
+<img width="469" height="223" alt="help_for_cli_text" src="https://github.com/user-attachments/assets/3daa1728-5847-4aba-8bc5-0e36b73fe602" />
+<img width="502" height="243" alt="help_for_cli_convert" src="https://github.com/user-attachments/assets/f336b0ae-422c-478a-be2d-f772da045a0f" />
+
+
+
+
+
+
 
 
 
