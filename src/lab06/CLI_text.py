@@ -67,7 +67,6 @@ def main():
     args = parser.parse_args()
 
     if args.command == "cat":
-        # ИСПРАВЛЕННАЯ ВЕРСИЯ - выводим строки файла как есть
         if not check_file(args.input):
             sys.exit(1)
 
@@ -84,14 +83,12 @@ def main():
             sys.exit(1)
 
     elif args.command == "stats":
-        # Для stats команды нужно сначала прочитать файл
         if not check_file(args.input):
             sys.exit(1)
 
         try:
             with open(args.input, 'r', encoding='utf-8') as f:
                 text = f.read()
-                # Теперь обрабатываем текст через tokenize/normalize для статистики
                 for e in top_n(count_freq(tokenize(normalize(text))), args.top):
                     print(e[0], e[1])
         except Exception as e:
