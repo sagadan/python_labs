@@ -60,9 +60,10 @@ def main():
         sys.exit(1)
 
 
+if __name__ == "__main__":
+    main()
 
-
-"   python3 -m src.lab06.CLI_convert json2csv --in data/samples/people.json --out data/out/people_from_json.csv   "
 "   python3 -m src.lab06.CLI_convert csv2json --in data/samples/people.csv --out data/out/people_from_csv.json   "
+"   python3 -m src.lab06.CLI_convert json2csv --in data/samples/people.json --out data/out/people_from_json.csv   "
 "   python3 -m src.lab06.CLI_convert csv2xlsx --in data/samples/people.csv --out data/out/people.xlsx   "
 "   python3 -m src.lab06.CLI_convert --help   "

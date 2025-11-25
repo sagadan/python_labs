@@ -1,63 +1,106 @@
 import csv, json, sys, os
+import os
+import json
 
 
-def is_json_file(file_path: str) -> bool:
-    return os.path.splitext(file_path)[1].lower() == '.json'
+def is_csv_file(file_path):
+    return file_path.lower().endswith(".csv")
 
 
-def is_csv_file(file_path: str) -> bool:
-    return os.path.splitext(file_path)[1].lower() == '.csv'
+def is_json_file(file_path):
+    return file_path.lower().endswith(".json")
 
 
-def is_valid_json_file(file_path: str) -> bool:
+def check_json_file(file_path: str) -> bool:
     try:
-        if not os.path.exists(file_path) or os.path.getsize(file_path) == 0:
-            return False
-        with open(file_path, 'r', encoding='utf-8') as file:
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"Файл '{file_path}' не существует")
+
+        if not is_json_file(file_path):
+            raise ValueError(f"Файл '{file_path}' не является JSON файлом")
+
+        if os.path.getsize(file_path) == 0:
+            raise ValueError(f"Файл '{file_path}' пустой")
+
+        with open(file_path, "r", encoding="utf-8") as file:
             json_data = json.load(file)
-            return isinstance(json_data, list) and len(json_data) > 0 and all(
-                isinstance(item, dict) for item in json_data)
-    except:
-        return False
+
+        if not isinstance(json_data, list):
+            raise ValueError("JSON должен быть списком")
+
+        if len(json_data) == 0:
+            raise ValueError("Список JSON пустой")
+
+        if not all(isinstance(item, dict) for item in json_data):
+            raise ValueError("Не все элементы в списке являются словарями")
+
+        return True
+
+    except (json.JSONDecodeError, UnicodeDecodeError, ValueError) as e:
+        if isinstance(e, UnicodeDecodeError):
+            raise ValueError(f"Ошибка кодировки файла: {e}")
+        else:
+            raise ValueError(f"Ошибка при проверке JSON файла: {e}")
+    except FileNotFoundError:
+        raise
+    except Exception as e:
+        raise ValueError(f"Неожиданная ошибка: {e}")
 
 
-def is_valid_csv_file(file_path: str) -> bool:
+def check_csv_file(file_path: str) -> bool:
     try:
-        if not os.path.exists(file_path) or os.path.getsize(file_path) == 0:
-            return False
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"Файл '{file_path}' не существует")
 
-        with open(file_path, 'r', encoding='utf-8') as file:
+        if not is_csv_file(file_path):
+            raise ValueError(f"Файл '{file_path}' не является CSV файлом")
+
+        if os.path.getsize(file_path) == 0:
+            raise ValueError(f"Файл '{file_path}' пустой")
+
+        with open(file_path, "r", encoding="utf-8") as file:
             reader = csv.reader(file)
             header = next(reader, None)
-            return header is not None and len(header) > 0
-    except:
-        return False
+
+            if len(header) == 0:
+                raise ValueError("Заголовок CSV файла пустой")
+
+            if any(not column.strip() for column in header):
+                raise ValueError("Заголовок CSV содержит пустые колонки")
+
+        return True
+
+    except (UnicodeDecodeError, ValueError) as e:
+        if isinstance(e, UnicodeDecodeError):
+            raise ValueError(f"Ошибка кодировки файла: {e}")
+        else:
+            raise ValueError(f"Ошибка при проверке CSV файла: {e}")
+    except FileNotFoundError:
+        raise
+    except Exception as e:
+        raise ValueError(f"Неожиданная ошибка: {e}")
 
 
 def json_to_csv(json_path: str, csv_path: str) -> None:
-    if not is_valid_json_file(json_path):
-        print("ValueError: Input file is not a valid JSON or is empty")
-        sys.exit(1)
+    check_json_file(json_path)
 
-    with open(json_path, 'r', encoding='utf-8') as json_file:
+    with open(json_path, "r", encoding="utf-8") as json_file:
         json_data = json.load(json_file)
 
-    with open(csv_path, 'w', newline='', encoding='utf-8') as csvfile:
+    with open(csv_path, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=json_data[0].keys())
         writer.writeheader()
         writer.writerows(json_data)
 
 
 def csv_to_json(csv_path: str, json_path: str) -> None:
-    if not is_valid_csv_file(csv_path):
-        print("ValueError: Input file is not a valid CSV or is empty")
-        sys.exit(1)
+    check_csv_file(csv_path)
 
-    with open(csv_path, 'r', encoding='utf-8') as csvfile:
+    with open(csv_path, "r", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
         data = list(reader)
 
-    with open(json_path, 'w', encoding='utf-8') as jsonfile:
+    with open(json_path, "w", encoding="utf-8") as jsonfile:
         json.dump(data, jsonfile, ensure_ascii=False, indent=4)
 
 
