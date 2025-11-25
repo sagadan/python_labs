@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python_labs_Danil"
+version = "24.11.2025"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+    "black>=24.0.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = "-v --cov=src --cov-report=term-missing"
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/CSV_XLSX.py",
+    "*/lib/CSV_XLSX.py",
+    "*/io_txt_csv.py",
+    "*/text_report.py",
+    "*/text_stats.py",
+    "*/tuples.py",
+    "*/lib/__init__.py*",
+    "*/lib/JSON_CSV.py*",
+    "*/lab05/__init__.py*",
+    "*/lab05/CSV_XLSX.py*",
+    "*src/lab05/__init__.py*",
+    "*/lab05/samples*",
+    "*/lib0.py*",
+
+]
