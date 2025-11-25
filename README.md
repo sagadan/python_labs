@@ -117,7 +117,9 @@ CLI‑программы позволяют вызывать функции пр
 <h2>CLI_convert<h2>
 <img width="558" height="563" alt="cli_convert_1" src="https://github.com/user-attachments/assets/24b31cc7-1168-4b25-a8c9-a0696b03add0" />
 <img width="634" height="372" alt="cli_convert_2" src="https://github.com/user-attachments/assets/f9bd1ba4-4f1c-4432-993f-f26b5893433c" />
-<h2>Help<h2>
+<h3>Вывод JSON -> CSV, CSV -> JSON, CSV -> XLSX:<h3>
+<img width="1278" height="141" alt="вывод json csv csv json" src="https://github.com/user-attachments/assets/d4a17f9b-f714-4ed6-99d1-28704a333943" />
+<h2>Help:<h2>
 <img width="469" height="223" alt="help_for_cli_text" src="https://github.com/user-attachments/assets/3daa1728-5847-4aba-8bc5-0e36b73fe602" />
 <img width="502" height="243" alt="help_for_cli_convert" src="https://github.com/user-attachments/assets/f336b0ae-422c-478a-be2d-f772da045a0f" />
 
