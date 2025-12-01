@@ -6,7 +6,6 @@ import re
 
 @dataclass
 class Student:
-    """Класс, представляющий студента"""
 
     fio: str
     birthdate: str
@@ -17,12 +16,10 @@ class Student:
     DATE_PATTERN: ClassVar[str] = r'^\d{4}-\d{2}-\d{2}$'
 
     def __post_init__(self):
-        """Валидация данных после инициализации"""
         self._validate_birthdate()
         self._validate_gpa()
 
     def _validate_birthdate(self):
-        """Проверка формата даты рождения"""
         if not re.match(self.DATE_PATTERN, self.birthdate):
             raise ValueError(f"Неверный формат даты: {self.birthdate}. Ожидается: YYYY-MM-DD")
 
@@ -34,12 +31,10 @@ class Student:
             raise ValueError(f"Некорректная дата: {self.birthdate}. Ошибка: {e}")
 
     def _validate_gpa(self):
-        """Проверка среднего балла"""
         if not (0 <= self.gpa <= 5):
             raise ValueError(f"Средний балл должен быть в диапазоне 0-5. Получено: {self.gpa}")
 
     def age(self) -> int:
-        """Возвращает количество полных лет студента"""
         birth_date = datetime.strptime(self.birthdate, "%Y-%m-%d").date()
         today = date.today()
 
@@ -53,7 +48,6 @@ class Student:
         return age
 
     def to_dict(self) -> dict:
-        """Сериализует объект Student в словарь"""
         return {
             "fio": self.fio,
             "birthdate": self.birthdate,
@@ -63,7 +57,6 @@ class Student:
 
     @classmethod
     def from_dict(cls, data: dict) -> 'Student':
-        """Десериализует словарь в объект Student"""
         return cls(
             fio=data["fio"],
             birthdate=data["birthdate"],
@@ -72,7 +65,6 @@ class Student:
         )
 
     def __str__(self) -> str:
-        """Возвращает строковое представление студента"""
         return (f"Студент: {self.fio}\n"
                 f"Дата рождения: {self.birthdate} (Возраст: {self.age()} лет)\n"
                 f"Группа: {self.group}\n"

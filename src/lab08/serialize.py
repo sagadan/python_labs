@@ -1,15 +1,10 @@
 import json
 from typing import List
-from models import Student  # или просто from models import Student
+from models import Student  
 
 
 def students_to_json(students: List[Student], path: str) -> None:
-    """
-    Сохраняем студентов в JSON файл
-    students - список студентов
-    path - куда сохранять
-    """
-    # Делаем список словарей из студентов
+
     data_to_save = []
     for student in students:
         data_to_save.append(student.to_dict())
@@ -22,11 +17,7 @@ def students_to_json(students: List[Student], path: str) -> None:
 
 
 def students_from_json(path: str) -> List[Student]:
-    """
-    Загружаем студентов из JSON файла
-    path - откуда загружать
-    возвращает список студентов
-    """
+
     students = []
     
     try:
