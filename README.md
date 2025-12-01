@@ -122,6 +122,27 @@ CLI‑программы позволяют вызывать функции пр
 <h2>Help:<h2>
 <img width="469" height="223" alt="help_for_cli_text" src="https://github.com/user-attachments/assets/3daa1728-5847-4aba-8bc5-0e36b73fe602" />
 <img width="502" height="243" alt="help_for_cli_convert" src="https://github.com/user-attachments/assets/f336b0ae-422c-478a-be2d-f772da045a0f" />
+<h1>Лабораторная работа номер 7<h1>
+<h2>A. Тесты для text.py<h2>
+<h3>Созданы комплексные тесты для всех функций модуля: normalize() - базовые и граничные случаи, tokenize() - различные сценарии токенизации, count_freq() - подсчет частот слов, top_n() - извлечение топ-N элементов с обработкой одинаковых частот<h3>
+<img width="890" height="575" alt="Снимок экрана 2025-11-25 в 13 20 17" src="https://github.com/user-attachments/assets/edff3003-c401-4b4b-b857-283bd2fe768e" />
+<img width="919" height="397" alt="Снимок экрана 2025-11-25 в 13 20 32" src="https://github.com/user-attachments/assets/cf2b7a3b-2c3f-49f9-96ab-891404dfdccc" />
+<h2>B. Тесты для json_csv.py<h2>
+<h3>Реализованы тесты для функций конвертации: Позитивные сценарии (корректная конвертация), Негативные сценарии (ошибки файлов, некорректные данные), Тесты полного цикла конвертации<h3>
+<img width="947" height="536" alt="Снимок экрана 2025-11-25 в 13 20 54" src="https://github.com/user-attachments/assets/e7d1dd1b-fd9e-49bb-82a8-a2c56bdfb6c8" />
+<img width="906" height="544" alt="Снимок экрана 2025-11-25 в 13 21 12" src="https://github.com/user-attachments/assets/c41a5b20-a1d4-47bd-acff-287720191c72" />
+<img width="931" height="559" alt="Снимок экрана 2025-11-25 в 13 21 28" src="https://github.com/user-attachments/assets/54d236d3-4fa3-4976-9c00-a4fd180ebc81" />
+<img width="831" height="576" alt="Снимок экрана 2025-11-25 в 13 21 49" src="https://github.com/user-attachments/assets/9c220071-b447-46cc-822e-da2e744b4335" />
+<img width="876" height="522" alt="Снимок экрана 2025-11-25 в 13 22 07" src="https://github.com/user-attachments/assets/12167542-dfb0-4a9c-a539-e94a76a63982" />
+<img width="860" height="129" alt="Снимок экрана 2025-11-25 в 13 22 18" src="https://github.com/user-attachments/assets/6f1c08aa-4386-4735-92de-f3c0b955c379" />
+<h2>C. Стиль кода<h2>
+<h3>Проект отформатирован с помощью black согласно конфигурации.<h3>
+<img width="789" height="95" alt="Снимок экрана 2025-11-25 в 13 24 58" src="https://github.com/user-attachments/assets/37c7437a-14f6-4b0d-a2b0-ec72c3e2fc92" />
+
+
+
+
+
 
 
 
