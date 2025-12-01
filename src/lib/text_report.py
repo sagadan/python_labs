@@ -10,7 +10,9 @@ try:
     with open(r"/data/lab_4/4.txt", "r", encoding="utf-8") as f:
         text = f.read()
 except UnicodeDecodeError:
-    print(f"Ошибка: не удалось прочитать файл с кодировкой. Попробуйте encoding cp65001")
+    print(
+        f"Ошибка: не удалось прочитать файл с кодировкой. Попробуйте encoding cp65001"
+    )
     sys.exit(1)
 
 words = tokenize(normalize(text))

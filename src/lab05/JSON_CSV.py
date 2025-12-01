@@ -104,7 +104,12 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
         json.dump(data, jsonfile, ensure_ascii=False, indent=4)
 
 
-csv_to_json(r"/Applications/python_labs/data/samples/people.csv",
-            r"/Applications/python_labs/data/out/people_from_csv.json")
+csv_to_json(
+    r"/Applications/python_labs/data/samples/people.csv",
+    r"/Applications/python_labs/data/out/people_from_csv.json",
+)
 
-json_to_csv(r"/Applications/python_labs/data/samples/people.json", r"/Applications/python_labs/data/out/people_from_json.csv")
+json_to_csv(
+    r"/Applications/python_labs/data/samples/people.json",
+    r"/Applications/python_labs/data/out/people_from_json.csv",
+)

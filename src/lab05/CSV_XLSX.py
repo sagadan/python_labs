@@ -2,6 +2,7 @@ import os, csv, sys
 
 from openpyxl import Workbook
 
+
 def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     if not os.path.exists(csv_path):
         print("FileNotFoundError")
@@ -19,7 +20,6 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
         for row in reader:
             wa.append(row)
 
-
     for column_cells in wa.columns:
         max_length = 0
         column_letter = column_cells[0].column_letter
@@ -28,4 +28,9 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
                 max_length = max(max_length, len(str(cell.value)))
         wa.column_dimensions[column_letter].width = max(max_length + 2, 8)
     wb.save(xlsx_path)
-csv_to_xlsx(r"/Applications/python_labs/data/samples/city.csv", r"/Applications/python_labs/data/out/city.xlsx")
+
+
+csv_to_xlsx(
+    r"/Applications/python_labs/data/samples/city.csv",
+    r"/Applications/python_labs/data/out/city.xlsx",
+)

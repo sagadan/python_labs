@@ -23,12 +23,12 @@ def cat_command(input_file: str, number_lines: bool = False):
         sys.exit(1)
 
     try:
-        with open(input_file, 'r', encoding='utf-8') as f:
+        with open(input_file, "r", encoding="utf-8") as f:
             for line_number, line in enumerate(f, start=1):
                 if number_lines:
-                    print(f"{line_number:6d}  {line}", end='')
+                    print(f"{line_number:6d}  {line}", end="")
                 else:
-                    print(line, end='')
+                    print(line, end="")
     except Exception as e:
         print(f"Ошибка при чтении файла: {e}", file=sys.stderr)
         sys.exit(1)
@@ -39,11 +39,13 @@ def stats_command(input_file: str, top_n: int = 5):
         sys.exit(1)
 
     if top_n <= 0:
-        print("Ошибка: значение --top должно быть положительным числом", file=sys.stderr)
+        print(
+            "Ошибка: значение --top должно быть положительным числом", file=sys.stderr
+        )
         sys.exit(1)
 
     try:
-        with open(input_file, 'r', encoding='utf-8') as f:
+        with open(input_file, "r", encoding="utf-8") as f:
             text = f.read()
             stats_text(text, top_n)
 
@@ -71,13 +73,13 @@ def main():
             sys.exit(1)
 
         try:
-            with open(args.input, 'r', encoding='utf-8') as f:
+            with open(args.input, "r", encoding="utf-8") as f:
                 if args.n:
                     for line_number, line in enumerate(f, start=1):
-                        print(f"{line_number:6d}  {line}", end='')
+                        print(f"{line_number:6d}  {line}", end="")
                 else:
                     for line in f:
-                        print(line, end='')
+                        print(line, end="")
         except Exception as e:
             print(f"Ошибка при чтении файла: {e}", file=sys.stderr)
             sys.exit(1)
@@ -87,7 +89,7 @@ def main():
             sys.exit(1)
 
         try:
-            with open(args.input, 'r', encoding='utf-8') as f:
+            with open(args.input, "r", encoding="utf-8") as f:
                 text = f.read()
                 for e in top_n(count_freq(tokenize(normalize(text))), args.top):
                     print(e[0], e[1])

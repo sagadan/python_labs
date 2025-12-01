@@ -13,6 +13,7 @@ def transpose(mat):
         res.append(new_row)
     return res
 
+
 def row_sums(mat):
     if not mat:
         return []
@@ -27,6 +28,7 @@ def row_sums(mat):
             s += x
         res.append(s)
     return res
+
 
 def col_sums(mat):
     if not mat:

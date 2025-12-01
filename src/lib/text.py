@@ -2,19 +2,25 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
     if casefold:
         text = text.casefold()
     if yo2e:
-        text = text.replace('ё', 'е').replace('Ё','Е')
+        text = text.replace("ё", "е").replace("Ё", "Е")
     text = text.strip()
-    spec_symb = ['\\t', '\\r', '\\n', '\\w', '\\f', '\\d', '\\v']
+    spec_symb = ["\\t", "\\r", "\\n", "\\w", "\\f", "\\d", "\\v"]
     for symb in spec_symb:
-        text = text.replace(symb, ' ')
+        text = text.replace(symb, " ")
     words = text.split()
-    text = ' '.join(words)
+    text = " ".join(words)
     return text
 
 
-
 def tokenize(text: str) -> list[str]:
-    cleaned = text.replace(',', ' ').replace('.', ' ').replace(':', ' ').replace(';', ' ').replace('!', ' ').replace('?', ' ')
+    cleaned = (
+        text.replace(",", " ")
+        .replace(".", " ")
+        .replace(":", " ")
+        .replace(";", " ")
+        .replace("!", " ")
+        .replace("?", " ")
+    )
     words = cleaned.split()
     filtered = []
     for word in words:
@@ -25,20 +31,18 @@ def tokenize(text: str) -> list[str]:
     return filtered
 
 
-
 def count_freq(tokens: list[str]) -> dict[str, int]:
     unic_t = list(set(tokens))
     count_t = []
     for i in unic_t:
         count_t.append(tokens.count(i))
-    dict_t = dict(zip(unic_t,count_t))
+    dict_t = dict(zip(unic_t, count_t))
     return dict_t
 
+
 def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
-    top = sorted(list(freq.items()), key=lambda x: (-x[1], x[0])) [:n]
+    top = sorted(list(freq.items()), key=lambda x: (-x[1], x[0]))[:n]
     return top
-
-
 
 
 # test_case_normalize = ['ПрИвЕт\nМИр\t', 'ёжик, Ёлка', 'Hello\r\nWorld', '  двойные   пробелы  ']
