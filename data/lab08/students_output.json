@@ -1,0 +1,20 @@
+[
+  {
+    "fio": "Michael Jackson",
+    "birthdate": "1958-08-29",
+    "group": "MJ-01",
+    "gpa": 3.6
+  },
+  {
+    "fio": "Brad Pitt",
+    "birthdate": "1963-12-18",
+    "group": "BP-09",
+    "gpa": 4.2
+  },
+  {
+    "fio": "Will Smith",
+    "birthdate": "1968-09-25",
+    "group": "WS-43",
+    "gpa": 5.0
+  }
+]

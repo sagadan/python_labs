@@ -44,19 +44,3 @@ def students_from_json(path: str) -> List[Student]:
     
     return students
 
-
-student1 = Student("Лимонов Максим", "2002-10-30", "ИВТ-104", 4.2)
-student2 = Student("Апельсинова Юля", "2003-02-01", "ИВТ-105", 3.8)
-
-# Проверяем возраст
-print(f"{student1.fio}: {student1.age()} лет")  # Выведет: Иванов Иван: 21 лет
-
-# Сохраняем в файл
-students_to_json([student1, student2], "/Applications/python_labs/src/lab08/students.json")
-
-# Загружаем обратно
-loaded_students = students_from_json("/Applications/python_labs/src/lab08/students.json")
-
-# Используем загруженных
-for student in loaded_students:
-    print(student)  # Вызовется student.__str__()
