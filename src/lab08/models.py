@@ -1,71 +1,67 @@
-from dataclasses import dataclass, asdict, field
-from datetime import datetime, date
-from typing import ClassVar
-import re
+from datetime import datetime, date #работает с датой и временем
+from dataclasses import dataclass # библиотека для сереализации (есть некий объект и хотим превратить в текст)
 
-
-@dataclass
+@dataclass # декоратор - это то что будет выполнено до исполнения(заранее)
 class Student:
-
+    """Класс Student представляет студента учебного заведения"""
     fio: str
     birthdate: str
     group: str
     gpa: float
 
-    # Паттерн для проверки формата даты
-    DATE_PATTERN: ClassVar[str] = r'^\d{4}-\d{2}-\d{2}$'
+    def __init__(self, fio, birthdate, group, gpa):
+        """Конструктор класса Student"""
+        self.fio = fio
+        self.birthdate = birthdate
+        self.group = group
+        self.gpa = gpa
+        self.__post_init__()
 
-    def __post_init__(self):
-        self._validate_birthdate()
-        self._validate_gpa()
-
-    def _validate_birthdate(self):
-        if not re.match(self.DATE_PATTERN, self.birthdate):
-            raise ValueError(f"Неверный формат даты: {self.birthdate}. Ожидается: YYYY-MM-DD")
-
-        # Проверка, что дата является корректной
+    def __post_init__(self): #выполняется после вызова конструктора
+        """Метод, автоматически вызываемый после __init__.
+        Выполняет валидацию данных."""
+        if self.gpa > 5 or self.gpa < 0:
+            raise ValueError("GPA должен быть в диапазоне от 0 до 5")
         try:
-            year, month, day = map(int, self.birthdate.split('-'))
-            date(year, month, day)
-        except ValueError as e:
-            raise ValueError(f"Некорректная дата: {self.birthdate}. Ошибка: {e}")
-
-    def _validate_gpa(self):
-        if not (0 <= self.gpa <= 5):
-            raise ValueError(f"Средний балл должен быть в диапазоне 0-5. Получено: {self.gpa}")
+            self.birthdate = datetime.strptime(self.birthdate, "%Y-%m-%d") #%Y - год /%m - месяц /%d - дата
+            #strptime преобразование строки к объекту datetime
+        except ValueError:
+            raise ValueError("Неправильный формат даты рождения, ожидается:ГГГГ-ММ-ДД")
+        
 
     def age(self) -> int:
-        birth_date = datetime.strptime(self.birthdate, "%Y-%m-%d").date()
+        """Рассчитывает возраст студента в полных годах"""
+        b = self.birthdate ## birthdate теперь объект datetime после валидации
         today = date.today()
-
-        # Вычисляем возраст
-        age = today.year - birth_date.year
-
-        # Корректируем, если день рождения в этом году еще не наступил
-        if (today.month, today.day) < (birth_date.month, birth_date.day):
-            age -= 1
-
-        return age
+        if today.month > b.month:
+            return today.year - b.year
+        if today.month < b.month:
+            return today.year - b.year - 1
+        if today.day >= b.day:
+            return today.year - b.year
+        return today.year - b.year - 1
 
     def to_dict(self) -> dict:
+        """ Сериализует объект Student в словарь
+        (Словарь с данными студента, готовый для сохранения в JSON)"""
+        
         return {
             "fio": self.fio,
-            "birthdate": self.birthdate,
+            "birthdate": self.birthdate.strftime("%Y/%m/%d"),
             "group": self.group,
-            "gpa": self.gpa
+            "gpa": self.gpa,
         }
 
-    @classmethod
-    def from_dict(cls, data: dict) -> 'Student':
-        return cls(
-            fio=data["fio"],
-            birthdate=data["birthdate"],
-            group=data["group"],
-            gpa=data["gpa"]
-        )
+    @classmethod 
+    def from_dict(cls, d: dict):
+        """Десериализует словарь в объект Student"""
+        fio = d["fio"]
+        birthdate = d["birthdate"]
+        group = d["group"]
+        gpa = d["gpa"]
+        return cls(fio, birthdate, group, gpa)
 
-    def __str__(self) -> str:
-        return (f"Студент: {self.fio}\n"
-                f"Дата рождения: {self.birthdate} (Возраст: {self.age()} лет)\n"
-                f"Группа: {self.group}\n"
-                f"Средний балл: {self.gpa:.2f}")
+    def __str__(self):
+        """ Возвращает читаемое строковое представление объекта"""
+        return f"Student:{self.fio}, {self.age()} years old, group {self.group}, rating {self.gpa}"
+    
