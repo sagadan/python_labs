@@ -17,16 +17,17 @@ class Student:
         self.gpa = gpa
         self.__post_init__()
 
-    def __post_init__(self): #выполняется после вызова конструктора
-        """Метод, автоматически вызываемый после __init__.
-        Выполняет валидацию данных."""
-        if self.gpa > 5 or self.gpa < 0:
-            raise ValueError("GPA должен быть в диапазоне от 0 до 5")
-        try:
-            self.birthdate = datetime.strptime(self.birthdate, "%Y-%m-%d") #%Y - год /%m - месяц /%d - дата
-            #strptime преобразование строки к объекту datetime
-        except ValueError:
-            raise ValueError("Неправильный формат даты рождения, ожидается:ГГГГ-ММ-ДД")
+    def __post_init__(self):
+    # Проверяем, является ли birthdate строкой
+        if isinstance(self.birthdate, str):
+            try:
+            # Если это строка, парсим ее
+                self._date_of_birth = datetime.strptime(self.birthdate, '%Y-%m-%d')
+            except ValueError:
+                raise ValueError('Invalid date format. Expected YYYY-MM-DD')
+        else:
+        # Если это уже объект date, оставляем как есть
+            self._date_of_birth = self.birthdate
         
 
     def age(self) -> int:
