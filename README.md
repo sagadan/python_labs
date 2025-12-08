@@ -138,6 +138,17 @@ CLI‑программы позволяют вызывать функции пр
 <h2>C. Стиль кода<h2>
 <h3>Проект отформатирован с помощью black согласно конфигурации.<h3>
 <img width="789" height="95" alt="Снимок экрана 2025-11-25 в 13 24 58" src="https://github.com/user-attachments/assets/37c7437a-14f6-4b0d-a2b0-ec72c3e2fc92" />
+<h1>Лабораторная работа номер 8<h1>
+<h2>models.py<h2>
+<img width="840" height="715" alt="models_lab08" src="https://github.com/user-attachments/assets/342bde9d-dca0-4a84-a36c-ca946e2cdd5f" />
+<img width="828" height="175" alt="models_lab08_2" src="https://github.com/user-attachments/assets/ce4106ab-b11c-498d-93f7-6c8f0d694362" />
+<h2>serialize.py<h2>
+<img width="789" height="603" alt="serialize_lab08" src="https://github.com/user-attachments/assets/b7d372ad-87fc-44fb-874f-a8b3ef6b8cec" />
+<h2>Вывод<h2>
+<img width="669" height="86" alt="lab08_вывод" src="https://github.com/user-attachments/assets/562999b7-5189-4f0b-950c-32d0b6e8ffa7" />
+
+
+
 
 
 
