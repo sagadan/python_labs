@@ -147,7 +147,40 @@ CLI‑программы позволяют вызывать функции пр
 <h2>Вывод<h2>
 <img width="669" height="86" alt="lab08_вывод" src="https://github.com/user-attachments/assets/562999b7-5189-4f0b-950c-32d0b6e8ffa7" />
 <h1>Лабораторная работа номер 9<h1>
+<h2>Класс Group
+
+• Инициализация: Group(storage_path) - создает или открывает CSV-файл
+
+• Добавление: add(student) - добавляет нового студента
+
+• Чтение: list() - возвращает всех студентов
+
+• Поиск: find(substr) - ищет студентов по подстроке в ФИО
+
+• Обновление: update(fio, **fields) - обновляет данные студента
+
+• Удаление: remove(fio) - удаляет студента по ФИО
+
+• Статистика: stats() - собирает статистику по группе (дополнительное задание)
+
+• Вывод: print_stats() - выводит статисктику по строкам(красивый вид)
+
+<h2>
 <h2>Group.py<h2>
+<img width="932" height="648" alt="group_py_1" src="https://github.com/user-attachments/assets/cbbf34bf-c61a-4f38-8827-f000bfb42fea" />
+<img width="976" height="601" alt="group_py_2" src="https://github.com/user-attachments/assets/e67f961c-2729-43c2-b76d-ac97bfbcffe1" />
+<img width="911" height="550" alt="group_py_3" src="https://github.com/user-attachments/assets/bb5ca59b-846e-43bf-a965-56e9ea6478ac" />
+<img width="959" height="598" alt="group_py_4" src="https://github.com/user-attachments/assets/a9ad9fe6-cb68-4d71-9ae8-f1f4f4eb7e5f" />
+<img width="946" height="578" alt="group_py_5" src="https://github.com/user-attachments/assets/849b1eca-3466-4d0f-b397-d97d963def83" />
+<img width="944" height="590" alt="group_py_6" src="https://github.com/user-attachments/assets/606f2406-78a2-4f23-9c2a-de794d759809" />
+<img width="965" height="579" alt="group_py_7" src="https://github.com/user-attachments/assets/a30b2b67-6d90-4262-b53c-726387643233" />
+
+
+
+
+
+
+
 
 
 
