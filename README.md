@@ -146,6 +146,9 @@ CLI‑программы позволяют вызывать функции пр
 <img width="789" height="603" alt="serialize_lab08" src="https://github.com/user-attachments/assets/b7d372ad-87fc-44fb-874f-a8b3ef6b8cec" />
 <h2>Вывод<h2>
 <img width="669" height="86" alt="lab08_вывод" src="https://github.com/user-attachments/assets/562999b7-5189-4f0b-950c-32d0b6e8ffa7" />
+<h1>Лабораторная работа номер 9<h1>
+<h2>Group.py<h2>
+
 
 
 
