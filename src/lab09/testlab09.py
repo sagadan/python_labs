@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 import os
 
@@ -20,7 +19,7 @@ class Student:
         self.gpa = float(gpa)
 
 def main():
-    print("Тестирование класса Group")
+    print("Тестирование класса Group"\)
     
     # Указываем путь к CSV файлу
     csv_path = os.path.join(project_root, 'data/lab09/students (1).csv')
