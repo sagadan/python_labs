@@ -174,6 +174,55 @@ CLI‑программы позволяют вызывать функции пр
 <img width="946" height="578" alt="group_py_5" src="https://github.com/user-attachments/assets/849b1eca-3466-4d0f-b397-d97d963def83" />
 <img width="944" height="590" alt="group_py_6" src="https://github.com/user-attachments/assets/606f2406-78a2-4f23-9c2a-de794d759809" />
 <img width="965" height="579" alt="group_py_7" src="https://github.com/user-attachments/assets/a30b2b67-6d90-4262-b53c-726387643233" />
+<h1>Лабораторная работа номер 10<h1>
+<h1>Теоретическая часть<h1>
+<h2>Стек
+Стек (англ. Stack) — это структура данных, работающая по принципу LIFO (Last In, First Out), где последний добавленный элемент извлекается первым.
+
+Типичные операции:
+
+• push: добавление элемента (O(1))
+
+• pop: удаление верхнего элемента (O(1))
+
+• peek: просмотр верхнего элемента без удаления (O(1))<h2>
+<h2>Очередь
+Очередь (англ. Queue) — это структура данных, работающая по принципу FIFO (First In, First Out), где первый добавленный элемент извлекается первым.
+
+Типичные операции:
+
+• enqueue: добавление элемента в конец очереди (O(1))
+
+• dequeue: удаление первого элемента (O(1))
+
+• peek: просмотр первого элемента без удаления (O(1))<h2>
+<h2>Связный список
+Связный список (англ. Linked List) — это структура данных, состоящая из узлов, где каждый узел содержит данные и ссылку на следующий узел.
+
+Типичные операции:
+
+• append: добавление элемента в конец списка (O(n))
+
+• prepend: добавление элемента в начало списка (O(1))
+
+• insert: вставка элемента по индексу (O(n))
+
+• remove_at: удаление элемента по индексу (O(n))
+<h2>
+<h2>Класс Stack<h2>
+<img width="606" height="612" alt="image" src="https://github.com/user-attachments/assets/23bed9ec-6fb8-433b-b067-a6d328249946" />
+<h2>Класс Queue<h2>
+<img width="584" height="619" alt="image" src="https://github.com/user-attachments/assets/d6592616-ad4f-4b45-bb65-15d1cf2ba512" />
+<h2>Класс SinglyLinkedList<h2>
+<img width="812" height="741" alt="image" src="https://github.com/user-attachments/assets/8b0f5ddd-e2f7-4c4c-89f2-f13854cc0bd1" />
+<img width="924" height="729" alt="image" src="https://github.com/user-attachments/assets/9b096a1a-26a2-41a1-90ce-e103f19da477" />
+<img width="833" height="708" alt="image" src="https://github.com/user-attachments/assets/95822ad3-2f75-4e9f-954f-be584df26ebb" />
+<img width="877" height="165" alt="image" src="https://github.com/user-attachments/assets/a09be221-7828-4be4-b468-b76794a5194a" />
+
+
+
+
+
 
 
 
